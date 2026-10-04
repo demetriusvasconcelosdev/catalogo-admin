@@ -61,7 +61,7 @@ public class CategoryTest {
     public void givenAnInvalidNameLengthLessThan3_whenCallNewCategoryAndValidate_thenShouldReceiveError() {
         final String expectedName = "Le ";
         final var expectedErrorCount = 1;
-        final var expectedErrorMessage = "'name' should not be between 3 and 255 characteres";
+        final var expectedErrorMessage = "'name' must be between 3 and 255 characters";
         final var expectedDescription = "A categoria mais assistida";
         final var expectedIsActive = true;
 
@@ -81,7 +81,7 @@ public class CategoryTest {
                 "A categoria mais assistidaA categoria mais assistidaA categoria mais assistidaA categoria mais assistidaA categoria mais assistidaA categoria mais assistidaA categoria mais assistidaA categoria mais assistidaA categoria mais assistida" +
                 "A categoria mais assistidaA categoria mais assistidaA categoria mais assistidaA categoria mais assistidaA categoria mais assistidaA categoria mais assistida";
         final var expectedErrorCount = 1;
-        final var expectedErrorMessage = "'name' should not be between 3 and 255 characteres";
+        final var expectedErrorMessage = "'name' must be between 3 and 255 characters";
         final var expectedDescription = "A categoria mais assistida";
         final var expectedIsActive = true;
 
