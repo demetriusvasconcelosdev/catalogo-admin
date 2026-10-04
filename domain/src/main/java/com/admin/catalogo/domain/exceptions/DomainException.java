@@ -8,17 +8,17 @@ public class DomainException extends RuntimeException {
 
     private final List<ValidationError> errors;
 
-    private DomainException(final List<ValidationError> anErrors) {
-        super("", null, true, false);
+    private DomainException(final String aMessage, final List<ValidationError> anErrors) {
+        super(aMessage);
         this.errors = anErrors;
     }
 
     public static DomainException with(final ValidationError anError) {
-        return new DomainException(List.of(anError));
+        return new DomainException( anError.message() ,List.of(anError) );
     }
 
     public static DomainException with(final List<ValidationError> anErrors) {
-        return new DomainException((anErrors));
+        return new DomainException("", anErrors);
     }
 
     public List<ValidationError> getErrors() {
